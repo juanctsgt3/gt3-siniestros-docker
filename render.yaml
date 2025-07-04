@@ -1,5 +1,5 @@
 services:
-  - type: web
+  - type: worker
     name: gt3-siniestros-bot
     env: docker
     plan: free
