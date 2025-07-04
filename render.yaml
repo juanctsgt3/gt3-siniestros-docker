@@ -1,8 +1,14 @@
 services:
-  - type: worker
+  - type: web
     name: gt3-siniestros-bot
-    env: docker
+    env: python
     plan: free
+    buildCommand: ""
+    startCommand: "python bot_gt3_webhook.py"
     envVars:
       - key: TELEGRAM_TOKEN
         value: 8117221184:AAEHOLFXRy567KRtHltbCTEx0rfb7fn7UKA
+      - key: WEBHOOK_URL
+        value: https://gt3-siniestros-bot.onrender.com/webhook
+    autoDeploy: true
+    env: python
